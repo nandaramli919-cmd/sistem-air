@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Pengguna</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>💧 Dashboard Pengguna</h1>
+
+<button class="logout" onclick="logout()">
+Logout
+</button>
+
+<!-- DATA PENGGUNA -->
+
+<div class="card">
+
+<h2>👤 Data Pengguna</h2>
+
+<input
+type="text"
+id="namaPengguna"
+placeholder="Masukkan Nama Pengguna">
+
+</div>
+
+<div class="dashboard">
+
+<!-- STOPWATCH -->
+
+<div class="card">
+
+<h2>⏱ Stopwatch Air</h2>
+
+<h1 id="timer">00:00:00</h1>
+
+<p>Volume Air : <span id="liter">0</span> Liter</p>
+
+<p>Biaya : Rp <span id="biaya">0</span></p>
+
+<button class="start" onclick="startTimer()">
+Mulai
+</button>
+
+<button class="stop" onclick="stopTimer()">
+Berhenti
+</button>
+
+<button class="save" onclick="saveData()">
+Simpan Data
+</button>
+
+<button class="delete" onclick="hapusDataPengguna()">
+Hapus Data
+</button>
+
+</div>
+
+<!-- KOMENTAR -->
+
+<div class="card">
+
+<h2>💬 Komentar / Saran</h2>
+
+<textarea
+id="komentar"
+rows="5"
+placeholder="Masukkan komentar atau saran">
+</textarea>
+
+<button
+class="send"
+onclick="kirimKomentar()">
+
+Kirim Komentar
+
+</button>
+
+</div>
+
+</div>
+
+<!-- RIWAYAT -->
+
+<div class="card">
+
+<h2>📋 Riwayat Penggunaan</h2>
+
+<table>
+
+<thead>
+
+<tr>
+<th>No</th>
+<th>Nama</th>
+<th>Tanggal</th>
+<th>Waktu</th>
+<th>Volume</th>
+<th>Biaya</th>
+<th>Status</th>
+</tr>
+
+</thead>
+
+<tbody id="riwayatBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- SARAN -->
+
+<div class="card">
+
+<h2>💡 Saran Menghemat Air</h2>
+
+<ul>
+<li>Matikan keran saat menyikat gigi.</li>
+<li>Periksa kebocoran pipa secara rutin.</li>
+<li>Gunakan ember saat mencuci kendaraan.</li>
+<li>Gunakan air bekas cucian untuk menyiram tanaman.</li>
+<li>Gunakan mesin cuci saat muatan penuh.</li>
+</ul>
+
+</div>
+
+</div>
+
+<script src="javascript.js"></script>
+
+</body>
+</html>

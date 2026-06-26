@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Admin</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>👨‍💼 Dashboard Admin</h1>
+
+<button class="logout" onclick="logout()">
+Logout
+</button>
+
+<div class="dashboard">
+
+<!-- NOTIFIKASI -->
+<div class="card">
+
+<h2>📩 Notifikasi</h2>
+
+<h1 id="jumlahKomentar">0</h1>
+
+<p>Komentar Masuk</p>
+
+</div>
+
+<!-- STATISTIK -->
+<div class="card">
+
+<h2>📊 Statistik</h2>
+
+<h3>Total Penggunaan Air</h3>
+
+<p id="totalLiter">0 Liter</p>
+
+<h3>Total Biaya</h3>
+
+<p id="totalBiaya">Rp 0</p>
+
+</div>
+
+</div>
+
+<!-- PENCARIAN -->
+
+<div class="card">
+
+<h2>🔍 Cari Pengguna</h2>
+
+<input
+type="text"
+id="cariNama"
+placeholder="Masukkan nama pengguna..."
+onkeyup="cariPengguna()">
+
+</div>
+
+<!-- KOMENTAR -->
+
+<div class="card">
+
+<h2>💬 Komentar Pengguna</h2>
+
+<table>
+
+<thead>
+
+<tr>
+<th>No</th>
+<th>Tanggal</th>
+<th>Komentar</th>
+<th>Aksi</th>
+</tr>
+
+</thead>
+
+<tbody id="komentarBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- RIWAYAT PENGGUNA -->
+
+<div class="card">
+
+<h2>📋 Data Pengguna & Pembayaran</h2>
+
+<table>
+
+<thead>
+
+<tr>
+<th>No</th>
+<th>Nama</th>
+<th>Tanggal</th>
+<th>Waktu Pemakaian</th>
+<th>Volume Air</th>
+<th>Biaya</th>
+<th>Status</th>
+<th>Aksi</th>
+</tr>
+
+</thead>
+
+<tbody id="riwayatAdminBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="javascript.js"></script>
+
+</body>
+</html>

@@ -73,19 +73,19 @@ button:hover{
 
 /* WARNA BUTTON */
 .start{
-    background:#28a745;
+    background:#7b7dec;
 }
 
 .stop{
-    background:#dc3545;
+    background:#9059e9;
 }
 
 .save{
-    background:#007bff;
+    background:#7fb4ec;
 }
 
 .delete{
-    background:#6c757d;
+    background:#6aa7dc;
 }
 
 .send{

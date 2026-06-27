@@ -1,140 +1,92 @@
 <!DOCTYPE html>
-
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard Pengguna</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Pengguna</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+    <div class="container">
 
-<h1>💧 Dashboard Pengguna</h1>
+        <h1>💧 Dashboard Pengguna</h1>
 
-<button class="logout" onclick="logout()">
-Logout
-</button>
+        <!-- TOMBOL LOGOUT -->
+        <button class="logout" onclick="logout()">
+            Logout
+        </button>
 
-<!-- DATA PENGGUNA -->
+        <!-- DATA PENGGUNA -->
+        <div class="card">
+            <h2>👤 Data Pengguna</h2>
+            <input type="text" id="namaPengguna" placeholder="Masukkan Nama Pengguna">
+        </div>
 
-<div class="card">
+        <div class="dashboard">
 
-<h2>👤 Data Pengguna</h2>
+            <!-- STOPWATCH -->
+            <div class="card">
+                <h2>⏱ Stopwatch Air</h2>
+                <h1 id="timer">00:00:00</h1>
+                <p>Volume Air : <span id="liter">0</span> Liter</p>
+                <p>Biaya : Rp <span id="biaya">0</span></p>
+                
+                <div class="button-group">
+                    <button class="start" onclick="startTimer()">Mulai</button>
+                    <button class="stop" onclick="stopTimer()">Berhenti</button>
+                    <button class="save" onclick="saveData()">Simpan Data</button>
+                    <button class="delete" onclick="hapusDataPengguna()">Hapus Data</button>
+                </div>
+            </div>
 
-<input
-type="text"
-id="namaPengguna"
-placeholder="Masukkan Nama Pengguna">
+            <!-- KOMENTAR -->
+            <div class="card">
+                <h2>💬 Komentar / Saran</h2>
+                <textarea id="komentar" rows="5" placeholder="Masukkan komentar atau saran"></textarea>
+                <button class="send" onclick="kirimKomentar()">Kirim Komentar</button>
+            </div>
 
-</div>
+        </div>
 
-<div class="dashboard">
+        <!-- RIWAYAT -->
+        <div class="card">
+            <h2>📋 Riwayat Penggunaan</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Tanggal</th>
+                        <th>Waktu</th>
+                        <th>Volume</th>
+                        <th>Biaya</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="riwayatBody">
+                    <!-- Data riwayat akan dimuat di sini secara otomatis oleh javascript.js -->
+                </tbody>
+            </table>
+        </div>
 
-<!-- STOPWATCH -->
+        <!-- SARAN -->
+        <div class="card">
+            <h2>💡 Saran Menghemat Air</h2>
+            <ul>
+                <li>Matikan keran saat menyikat gigi.</li>
+                <li>Periksa kebocoran pipa secara rutin.</li>
+                <li>Gunakan ember saat mencuci kendaraan.</li>
+                <li>Gunakan air bekas cucian untuk menyiram tanaman.</li>
+                <li>Gunakan mesin cuci saat muatan penuh.</li>
+            </ul>
+        </div>
 
-<div class="card">
+    </div>
 
-<h2>⏱ Stopwatch Air</h2>
+    <!-- HUBUNGKAN KE FILE JAVASCRIPT USER -->
+    <script src="javascript.js"></script>
 
-<h1 id="timer">00:00:00</h1>
-
-<p>Volume Air : <span id="liter">0</span> Liter</p>
-
-<p>Biaya : Rp <span id="biaya">0</span></p>
-
-<button class="start" onclick="startTimer()">
-Mulai
-</button>
-
-<button class="stop" onclick="stopTimer()">
-Berhenti
-</button>
-
-<button class="save" onclick="saveData()">
-Simpan Data
-</button>
-
-<button class="delete" onclick="hapusDataPengguna()">
-Hapus Data
-</button>
-
-</div>
-
-<!-- KOMENTAR -->
-
-<div class="card">
-
-<h2>💬 Komentar / Saran</h2>
-
-<textarea
-id="komentar"
-rows="5"
-placeholder="Masukkan komentar atau saran">
-</textarea>
-
-<button
-class="send"
-onclick="kirimKomentar()">
-
-Kirim Komentar
-
-</button>
-
-</div>
-
-</div>
-
-<!-- RIWAYAT -->
-
-<div class="card">
-
-<h2>📋 Riwayat Penggunaan</h2>
-
-<table>
-
-<thead>
-
-<tr>
-<th>No</th>
-<th>Nama</th>
-<th>Tanggal</th>
-<th>Waktu</th>
-<th>Volume</th>
-<th>Biaya</th>
-<th>Status</th>
-</tr>
-
-</thead>
-
-<tbody id="riwayatBody">
-
-</tbody>
-
-</table>
-
-</div>
-
-<!-- SARAN -->
-
-<div class="card">
-
-<h2>💡 Saran Menghemat Air</h2>
-
-<ul>
-<li>Matikan keran saat menyikat gigi.</li>
-<li>Periksa kebocoran pipa secara rutin.</li>
-<li>Gunakan ember saat mencuci kendaraan.</li>
-<li>Gunakan air bekas cucian untuk menyiram tanaman.</li>
-<li>Gunakan mesin cuci saat muatan penuh.</li>
-</ul>
-
-</div>
-
-</div>
-
-<script src="javascript.js"></script>
 
 </body>
 </html>
